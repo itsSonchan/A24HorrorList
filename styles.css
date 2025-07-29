@@ -87,4 +87,18 @@ h3 {
     font-size: 13px;
     padding: 18px;
   }
+  h3 {
+    font-size: 12px;
+  }
+  .grid p {
+    margin-right: 15px;
+    font-size: 10px;
+  }
+  .a24-link {
+    font-size: 10px;
+    margin-right: 10px;
+  }
+  footer {
+    padding: 10px;
+  }
 }
