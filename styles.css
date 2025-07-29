@@ -1,6 +1,7 @@
 body {
   background-color: #494949;
   font-family: "Limelight", sans-serif;
+  margin: 0;
 }
 .container {
   max-width: 1200px;
@@ -20,7 +21,7 @@ h1 {
   font-size: 50px;
   padding: 60px 0px;
 }
-button {
+.ranked-list {
   font-family: "Limelight", sans-serif;
   padding: 20px;
   font-size: 18px;
@@ -30,15 +31,13 @@ button {
   border: none;
   box-shadow: 0px 0px 19px 5px rgba(255, 255, 255, 0.2);
 }
-button:hover {
+.ranked-list:hover {
   box-shadow: 0px 0px 19px 3px rgba(255, 255, 255, 0.8);
   transition: 200ms ease-in-out;
   text-shadow: 0px 0px 2px rgba(255, 255, 255);
 }
 main {
-  background-color: black;
-  padding: 80px 50px;
-  align-items: center;
+  padding: 0;
 }
 main p {
   color: white;
@@ -51,7 +50,98 @@ main h3 {
 .main-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  background-color: black;
+  padding: 80px 50px;
+  align-items: center;
 }
+.main-cards {
+  background-color: #620000;
+  padding: 30px;
+  padding-bottom: 50px;
+  text-align: center;
+  color: white;
+}
+.main-cards h2 {
+  font-size: 30px;
+  margin-bottom: 40px;
+}
+.lighthouse {
+  filter: brightness(40%);
+}
+.midsommar {
+  filter: brightness(25%) grayscale(100%);
+}
+.tvglow {
+  filter: brightness(70%) grayscale(100%);
+}
+.main-cards img:hover {
+  filter: none;
+  box-shadow: 0px 0px 19px 3px rgba(255, 255, 255, 0.8);
+}
+.main-cards img {
+  display: block;
+}
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+.card-grid img {
+  margin: auto;
+}
+.card-grid button {
+  font-size: 25px;
+  font-family: "Limelight", sans-serif;
+  color: white;
+  background-color: #620000;
+  border: none;
+  margin-top: 20px;
+}
+.card-grid button:hover {
+  cursor: pointer;
+}
+.card-grid h4 {
+  font-size: 18px;
+}
+.card-grid p {
+  font-family: "Roboto", sans-serif;
+}
+.content {
+  display: none;
+}
+.collapsible:after {
+  content: "↓";
+  font-size: 20px;
+  color: white;
+  margin-left: 15px;
+}
+.active:after {
+  content: "↑";
+}
+h5 {
+  color: white;
+  margin-bottom: 40px;
+}
+.main-embeds {
+  background-color: black;
+  padding: 30px;
+}
+.main-embeds h2 {
+  font-size: 30px;
+  color: white;
+  text-align: center;
+}
+.trailer-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin: 50px 30px;
+}
+.trailer {
+  border-radius: 5px;
+  aspect-ratio: 16/9;
+}
+
 footer {
   color: white;
   background-image: linear-gradient(rgba(0, 0, 0, 0.1)),
@@ -100,17 +190,18 @@ h3 {
     font-size: 30px;
     padding: 20px;
   }
-  button {
+  .ranked-list {
     font-size: 13px;
     padding: 18px;
     box-shadow: 0px 0px 19px 3px rgba(255, 255, 255, 0.8);
     text-shadow: 0px 0px 2px rgba(255, 255, 255);
   }
-  main {
-    padding: 20px 40px 40px;
-  }
   .main-grid {
     grid-template-columns: 1fr;
+    padding: 20px 40px 40px;
+  }
+  .main-cards h2 {
+    font-size: 25px;
   }
   main p {
     font-size: 13px;
@@ -124,6 +215,40 @@ h3 {
   }
   h3 {
     font-size: 12px;
+  }
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+  .main-cards img {
+    filter: none;
+    width: 250px;
+  }
+  .main-cards h2 {
+    font-size: 20px;
+  }
+  .main-cards h5 {
+    font-size: 12px;
+  }
+  .main-cards button {
+    font-size: 18px;
+  }
+  .collapsible:after {
+    font-size: 15px;
+  }
+  .content {
+    margin: 30px;
+  }
+  .main-embeds h2 {
+    font-size: 25px;
+  }
+  .trailer-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin: 30px 0;
+  }
+  .trailer {
+    width: 90%;
+    margin: auto;
   }
   .footer-grid {
     grid-template-columns: 1fr;
